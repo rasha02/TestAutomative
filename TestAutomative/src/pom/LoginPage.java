@@ -9,7 +9,8 @@ public class LoginPage {
 		
 		BaseClass.getWebDriver().findElement(By.id("email")).sendKeys(Email);
 		BaseClass.getWebDriver().findElement(By.id("passwd")).sendKeys(Password);
-		BaseClass.getWebDriver().findElement(By.id("SubmitLogin")).click();
+		//BaseClass.getWebDriver().findElement(By.id("SubmitLogin")).click();
+		BaseClass.getWebDriver().findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]")).click();
 	
 	}
 	

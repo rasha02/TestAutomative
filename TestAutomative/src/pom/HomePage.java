@@ -1,6 +1,9 @@
 package pom;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
@@ -16,8 +19,20 @@ public class HomePage {
   public void clickOnContactUs()
   {
 	  
-	  BaseClass.getWebDriver().findElement(By.id("contact-link")).click();
-	  
+	  BaseClass.getWebDriver().findElement(By.id("contact-link")).click();	  
 	  
   }
+  
+  public int getHomePageItemsCount()
+  {
+	  
+	 List<WebElement> itemsList = BaseClass.getWebDriver().findElements(By.xpath("//*[@class='product-container']"));
+	 return itemsList.size();
+  
+  }
+  
+  
+  
+  
+  
 }
